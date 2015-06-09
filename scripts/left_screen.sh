@@ -25,7 +25,7 @@ tmux send-keys "docker start mutt" C-m
 tmux split-window -h
 tmux select-pane -t 0
 tmux split-window -v
-tmux send-keys "docker start rainbow" C-m
+tmux send-keys "todo ls" C-m
 
 tmux select-pane -t 2
 #tmux send-keys C-t
@@ -38,9 +38,15 @@ tmux resize-pane -U 22
 tmux select-pane -t 3
 tmux send-keys "docker run -ti --rm francois/w3m:0.1 http://media.commandline.org.uk/code/mutt.txt" C-m
 tmux split-window -v
-tmux send-keys "docker run -ti --rm francois/w3m:0.1 http://rainbowstream.readthedocs.org/en/latest/#usage" C-m
+tmux send-keys "todo help" C-m
 
 
 ## Window 4 is for irc
 tmux new-window -t $SESSION_NAME:4 -n 'irc'
 #tmux send-keys "docker start irssi" C-m
+
+## Window  5 for twitter
+tmux new-window -t $SESSION_NAME:5 -n 'twitter'
+tmux send-keys "todo ls" C-m
+tmux split-window -h
+tmux send-keys "docker run -ti --rm francois/w3m:0.1 http://rainbowstream.readthedocs.org/en/latest/#usage" C-m
