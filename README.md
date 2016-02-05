@@ -36,8 +36,11 @@ cd dotfiles/.vim
 git checkout master
 git pull
 git submodule add https://github.com/tmhedberg/SimpylFold.git bundle/SimpylFold
+git commit -m "blabla"
+git push origin master
 
 cd ..
 git add -A
+git commit -m "blabla"
 git push origin master
 ```
