@@ -8,6 +8,9 @@ au BufNewFile,BufRead *.py
 
 "Plugins configs
 "
+"NERDTree
+map <leader>n  :NERDTree<CR>
+
 "SimpylFold
 "Show the docstrings for folded code
 let g:SimpylFold_docstring_preview=1
